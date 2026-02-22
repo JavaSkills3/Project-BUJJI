@@ -1,5 +1,6 @@
 package com.career.demo.controller;
 
+import com.career.demo.model.Student;
 import com.career.demo.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ public class HelloController {
     }
 
     @GetMapping("/hello")
-    public String sayHello(){
-        return helloService.sayHello();
+    public Student sayHello(){
+        return helloService.getStudent();
     }
 }
